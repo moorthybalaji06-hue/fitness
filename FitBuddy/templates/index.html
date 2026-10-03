@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}FitBuddy – Your Friendly Wellness Companion{% endblock %}
+
+{% block content %}
+<div class="space-y-12 py-4">
+  <!-- Hero Section -->
+  <section class="rounded-3xl bg-gradient-to-b from-blue-50/80 via-white to-slate-50 border border-blue-100 p-8 sm:p-12 text-center space-y-6">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold">
+      ✨ AI-Powered Wellness for College Students
+    </div>
+
+    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+      Your friendly <span class="text-blue-600">wellness companion</span>
+    </h1>
+
+    <p class="text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+      Stay energized, active, and nourished throughout your college semesters. Get gentle movement routines, balanced hostel meal ideas, and smart daily habits powered by Google Gemini AI.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+      <a href="/dashboard" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md shadow-blue-500/20 transition-all">
+        Open Dashboard →
+      </a>
+      <a href="/chatbot" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white border border-blue-200 text-blue-700 hover:bg-blue-50 font-semibold text-sm shadow-xs transition-all">
+        Ask FitBuddy
+      </a>
+    </div>
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="space-y-4">
+    <div class="text-center">
+      <h2 class="text-2xl font-bold text-slate-900">Tailored for Busy Students</h2>
+      <p class="text-xs text-slate-500 mt-1">Sustainable routines without gym memberships or restrictive diets</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+      <!-- Card 1: Activity Planner -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between space-y-4">
+        <div class="space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg">
+            🏃
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Activity Planner</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Generate 10 to 45-minute daily movement plans including warm-up, main exercise, and posture cool-down for desk stiffness.
+          </p>
+        </div>
+        <a href="/workout" class="text-xs font-bold text-blue-600 hover:underline">Plan movement routine →</a>
+      </div>
+
+      <!-- Card 2: Meal Ideas -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between space-y-4">
+        <div class="space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-lg">
+            🥗
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Meal Ideas</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Wholesome, budget-friendly meal ideas for Vegetarian, Non-veg, Vegan, or South Indian food preferences. Zero restrictive diets.
+          </p>
+        </div>
+        <a href="/meals" class="text-xs font-bold text-indigo-600 hover:underline">Explore student meals →</a>
+      </div>
+
+      <!-- Card 3: AI Chat -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs flex flex-col justify-between space-y-4">
+        <div class="space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center font-bold text-lg">
+            💬
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">AI Chatbot</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Chat with FitBuddy powered by Google Gemini. Ask for desk stretches, hydration strategies, or relaxation breathing.
+          </p>
+        </div>
+        <a href="/chatbot" class="text-xs font-bold text-cyan-600 hover:underline">Start AI conversation →</a>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

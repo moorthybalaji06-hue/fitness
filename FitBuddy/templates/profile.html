@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile – FitBuddy{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto py-2 space-y-6">
+  <div class="border-b border-slate-200 pb-3 flex items-center justify-between">
+    <div>
+      <h2 class="text-2xl font-bold text-slate-900">Student Profile</h2>
+      <p class="text-xs text-slate-500 mt-1">Stored securely in Firebase Firestore</p>
+    </div>
+    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">Firestore Synced</span>
+  </div>
+
+  <div id="profile-success-msg" class="hidden p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800">
+    Profile successfully saved to Firestore!
+  </div>
+
+  <form id="profile-form" class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs space-y-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Full Name</label>
+        <input type="text" id="prof-name" required value="Alex Rivera" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm">
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Email</label>
+        <input type="email" id="prof-email" disabled value="alex.student@campus.edu" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-500 text-sm">
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Age</label>
+        <input type="number" id="prof-age" required min="16" max="90" value="20" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm">
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Activity Level</label>
+        <select id="prof-level" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white">
+          <option value="Beginner" selected>Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Casual / Light">Casual / Light</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Available Daily Time</label>
+        <select id="prof-time" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white">
+          <option value="10">10 Minutes</option>
+          <option value="15">15 Minutes</option>
+          <option value="20" selected>20 Minutes</option>
+          <option value="30">30 Minutes</option>
+          <option value="45">45 Minutes</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Food Preference</label>
+        <select id="prof-food" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white">
+          <option value="No preference">No preference</option>
+          <option value="Vegetarian" selected>Vegetarian</option>
+          <option value="Non-vegetarian">Non-vegetarian</option>
+          <option value="Vegan">Vegan</option>
+          <option value="South Indian">South Indian</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Primary Fitness/Wellness Goal</label>
+      <select id="prof-goal" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white">
+        <option value="General fitness & daily movement" selected>General fitness & daily movement</option>
+        <option value="Mobility and flexibility">Mobility and flexibility</option>
+        <option value="Stress relief & mental relaxation">Stress relief & mental relaxation</option>
+        <option value="Desk posture correction">Desk posture correction</option>
+      </select>
+    </div>
+
+    <div class="pt-3 border-t border-slate-100 flex justify-end">
+      <button type="submit" class="px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-xs transition-all">
+        Save Profile to Firestore
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

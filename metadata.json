@@ -1,0 +1,6 @@
+{
+  "name": "FitBuddy – AI Fitness & Wellness Assistant",
+  "description": "AI-powered wellness companion for students featuring personalized activity planning, nutritious meal suggestions, daily wellness trackers, and an intelligent Gemini AI chat assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

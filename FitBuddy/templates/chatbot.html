@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}AI Chatbot – FitBuddy{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto py-2 space-y-4">
+  <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+    <div>
+      <h2 class="text-xl font-bold text-slate-900">FitBuddy AI Chatbot</h2>
+      <p class="text-xs text-slate-500">Ask general wellness and activity questions powered by Google Gemini</p>
+    </div>
+    <button id="clear-chat-btn" class="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-600 hover:bg-slate-100">
+      Reset Chat
+    </button>
+  </div>
+
+  <!-- Chat Container -->
+  <div class="bg-white rounded-2xl border border-slate-200 shadow-xs flex flex-col h-[520px] overflow-hidden">
+    <div id="chat-messages" class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
+      <!-- Initial Message -->
+      <div class="flex gap-3 max-w-[85%]">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shrink-0 text-xs font-bold">
+          FB
+        </div>
+        <div class="rounded-2xl p-4 bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-800 leading-relaxed shadow-xs">
+          Hello! I'm FitBuddy, your friendly student wellness assistant powered by Google Gemini. Ask me for quick desk stretches, hydration advice, nutritious study meals, or bedtime wind-down routines!
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggested Prompts -->
+    <div class="p-2.5 bg-slate-50 border-t border-slate-100 flex items-center gap-2 overflow-x-auto text-[11px]">
+      <span class="font-bold text-slate-500 shrink-0">Try asking:</span>
+      <button class="quick-prompt px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-blue-300">
+        Give me a simple activity routine for today.
+      </button>
+      <button class="quick-prompt px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-blue-300">
+        What is a healthy snack for late night study?
+      </button>
+      <button class="quick-prompt px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-700 hover:border-blue-300">
+        Desk stretches for neck and shoulder stiffness
+      </button>
+    </div>
+
+    <!-- Input Form -->
+    <div class="p-3 sm:p-4 bg-white border-t border-slate-200">
+      <form id="chat-form" class="flex items-center gap-2">
+        <input type="text" id="chat-input" placeholder="Ask FitBuddy for wellness tips or gentle activity ideas..." class="flex-1 px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100">
+        <button type="submit" id="chat-send-btn" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow-xs">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
